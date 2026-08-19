@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Happy Birthday Zhang Jing Yi • 依依 生日快乐 🎂✨</title>
+  <meta name="description" content="A romantic celestial birthday experience crafted with love for Zhang Jing Yi (依依).">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Orbs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Background Interactive Canvases -->
+  <canvas id="star-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="nav-brand">
+        <span class="brand-heart">💖</span>
+        <span class="brand-text" data-i18n="brandTitle">张净依 • 生日快乐 🎂</span>
+      </div>
+      <div class="nav-actions">
+        <button id="lang-toggle-btn" class="nav-pill-btn" aria-label="Toggle Language">
+          English 🇬🇧
+        </button>
+      </div>
+    </header>
+
+    <!-- COUNTDOWN SECTION (FULLSCREEN AMBIENT LOCK SCREEN) -->
+    <section id="countdown-section" class="countdown-section fullscreen-lock">
+      <div class="countdown-badge">
+        <span class="pulsing-dot"></span>
+        <span data-i18n="countdownBadge">✨ 重庆时间 8月20日 00:00 倒计时 ✨</span>
+      </div>
+      <h1 class="countdown-title" data-i18n="countdownTitle">距离宝贝 依依 的生日还有</h1>
+      <p class="countdown-subtitle" data-i18n="countdownSubtitle">每一秒的流逝，都是我对你更加深沉的思念...</p>
+      
+      <div id="beijing-clock" class="beijing-clock-badge">
+        🇨🇳 重庆时间 / Chongqing Time: Calculating... (CST / UTC+8)
+      </div>
+
+      <div class="countdown-grid">
+        <div class="countdown-card">
+          <span id="cd-days" class="countdown-val">00</span>
+          <span class="countdown-lbl" data-i18n="days">天</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cd-hours" class="countdown-val">00</span>
+          <span class="countdown-lbl" data-i18n="hours">时</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cd-mins" class="countdown-val">00</span>
+          <span class="countdown-lbl" data-i18n="minutes">分</span>
+        </div>
+        <div class="countdown-card">
+          <span id="cd-secs" class="countdown-val">00</span>
+          <span class="countdown-lbl" data-i18n="seconds">秒</span>
+        </div>
+      </div>
+
+      <div class="countdown-lock-badge">
+        <span data-i18n="lockMsg">🔒 零点准时开启生日惊喜 • 倒计时结束后自动呈现 💖</span>
+      </div>
+    </section>
+
+    <!-- FULL BIRTHDAY EXPERIENCE (UNLOCKED AT MIDNIGHT 00:00) -->
+    <main id="main-experience" class="main-experience-locked">
+
+      <!-- HERO / BIRTHDAY STAGE -->
+      <section id="hero-section" class="hero-stage">
+      <div class="hero-avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar-img-box">
+          <img src="assets/photos/Image_20260717172901_4776_28.jpg" alt="Zhang Jing Yi (Yi)">
+        </div>
+      </div>
+
+      <div class="hero-greeting" data-i18n="heroGreeting">致我全世界最可爱的女孩 依依 (宝贝)</div>
+      <h2 class="hero-main-title" data-i18n="heroTitle">Happy Birthday Zhang Jingyi</h2>
+      <p class="hero-submessage" data-i18n="heroSubtitle">
+        愿你的世界永远灿烂温柔，所有的美好与幸运都如期而至。虽然隔着千山万水，但我的心每分每秒都和你紧紧相依。
+      </p>
+
+      <!-- Connection / Distance Line -->
+      <div class="connection-badge">
+        <div class="location-tag" data-i18n="fromParis">🇫🇷 巴黎 (Paris)</div>
+        <div class="flight-line">
+          <span>•••••</span>
+          <span class="plane-icon">✈️</span>
+          <span>•••••</span>
+          <span data-i18n="distanceText">8,245 km • 巴黎 ✈️ 重庆 • 心心相印</span>
+        </div>
+        <div class="location-tag" data-i18n="toChongqing">🇨🇳 重庆 (Chongqing)</div>
+      </div>
+    </section>
+
+    <!-- STORY & TIMELINE SECTION -->
+    <section class="timeline-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="storyTag">OUR CHERISHED STORY</span>
+        <h3 class="section-title" data-i18n="storyTitle">我们珍藏的浪漫记忆 📖</h3>
+        <p class="section-desc" data-i18n="storyDesc">从重庆的初次相遇，到每一个思念的日夜...</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date" data-i18n="timeline1Date">2026年6月24日</div>
+            <h4 class="timeline-headline" data-i18n="timeline1Title">初遇 • 重庆鸿恩寺公园 1号门 🌿</h4>
+            <p class="timeline-text" data-i18n="timeline1Text">
+              那是故事开始的地方。当你在鸿恩寺公园向我走来的那一刻，整个重庆的夏天都变得无比温柔。你的笑容是我见过最美的风景。
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date" data-i18n="timeline2Date">阳台上的初吻与无数甜蜜瞬间</div>
+            <h4 class="timeline-headline" data-i18n="timeline2Title">牵手、拥抱、阳台一吻与停不下来的心动 ✨</h4>
+            <p class="timeline-text" data-i18n="timeline2Text">
+              还记得在阳台上的初吻吗？从那一刻起，我们牵着手走过大街小巷，深情拥抱，一起品尝无数美食，分享无尽的欢笑与甜蜜，怎么亲吻都舍不得停下。
+            </p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date" data-i18n="timeline3Date">10月假期见 • 明年常驻重庆</div>
+            <h4 class="timeline-headline" data-i18n="timeline3Title">10月重庆度假见 • 明年定居重庆天天相伴 ✈️</h4>
+            <p class="timeline-text" data-i18n="timeline3Text">
+              宝贝，我真的太想你了！10月份我就要回重庆度假见你啦！而且明年我就会正式搬到重庆定居，到时候我们就能天天见面，一起创造更多属于我们的幸福时光！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLAROID GALLERY SECTION -->
+    <section class="gallery-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="galleryTag">MEMORIES & POLAROIDS</span>
+        <h3 class="section-title" data-i18n="galleryTitle">依依的闪光瞬间墙 📸</h3>
+        <p class="section-desc" data-i18n="galleryDesc">记录你每一个可爱、美丽、迷人的笑容（点击可放大查看）</p>
+      </div>
+
+      <div id="polaroid-grid" class="polaroid-grid">
+        <!-- Rendered dynamically by gallery.js -->
+      </div>
+    </section>
+
+    <!-- WAX-SEALED LOVE LETTER ENVELOPE -->
+    <section class="envelope-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="envelopeTag">SECRET LOVE LETTER</span>
+        <h3 class="section-title" data-i18n="envelopeTitle">来自远方的亲笔信 💌</h3>
+        <p class="section-desc" data-i18n="envelopeDesc">轻触火漆印章，拆开这份独一无二的心意</p>
+      </div>
+
+      <div class="envelope-wrapper">
+        <div id="envelope-box" class="envelope-box">
+          <div class="envelope-left-fold"></div>
+          <div class="envelope-right-fold"></div>
+          <div class="envelope-flap-top"></div>
+          <div class="envelope-ribbon-gold"></div>
+          <div id="wax-seal" class="wax-seal">
+            <span data-i18n="waxSealText">Y & L</span>
+          </div>
+          <div class="envelope-tip" data-i18n="envelopeTip">✨ 轻触火漆印章打开信件 ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE QUESTS & SURPRISES -->
+    <section class="quests-section">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="questsTag">INTERACTIVE SURPRISES</span>
+        <h3 class="section-title" data-i18n="questsTitle">为依依准备的三大生日仪式 🎁</h3>
+        <p class="section-desc" data-i18n="questsDesc">动动手指，体验专属你的生日互动</p>
+      </div>
+
+      <div class="quests-grid">
+        <!-- Quest 1: Sky Lanterns -->
+        <div class="quest-card">
+          <div class="quest-icon-box">🏮</div>
+          <h4 class="quest-title" data-i18n="quest1Title">放飞生日许愿天灯 🏮</h4>
+          <p class="quest-desc" data-i18n="quest1Desc">将你的心愿写下，放飞升入夜空，星星会为你守护每一个梦想。</p>
+          <button id="open-lantern-btn" class="quest-action-btn" data-i18n="quest1Btn">放飞天灯 🎈</button>
+        </div>
+
+        <!-- Quest 2: Love Reasons -->
+        <div class="quest-card">
+          <div class="quest-icon-box">💖</div>
+          <h4 class="quest-title" data-i18n="quest2Title">爱依依的100个理由 💖</h4>
+          <p class="quest-desc" data-i18n="quest2Desc">点击抽取一颗爱心胶囊，看看今天我又多爱了你一点什么！</p>
+          <button id="open-reason-btn" class="quest-action-btn" data-i18n="quest2Btn">抽取爱心胶囊 ✨</button>
+        </div>
+
+        <!-- Quest 3: Cake Blowout -->
+        <div class="quest-card">
+          <div class="quest-icon-box">🎂</div>
+          <h4 class="quest-title" data-i18n="quest3Title">吹灭虚拟生日蛋糕蜡烛 🎂</h4>
+          <p class="quest-desc" data-i18n="quest3Desc">闭上眼睛许个愿，然后点击吹灭蜡烛，开启一整年的好运！</p>
+          <button id="open-cake-btn" class="quest-action-btn" data-i18n="quest3Btn">许愿吹蜡烛 🕯️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-love-text" data-i18n="footerLove">Made with infinite love for Zhang Jing Yi (依依) 💕</p>
+      <p data-i18n="footerCopyright">2026 • Paris ✈️ Chongqing • Forever & Always</p>
+    </footer>
+
+    </main>
+  </div>
+
+  <!-- FLOATING AUDIO PLAYER (VINYL VIBE) -->
+  <div class="floating-audio-player">
+    <div id="vinyl-disc" class="vinyl-disc">
+      <div class="vinyl-center"></div>
+    </div>
+    <div class="player-info">
+      <div class="player-track-title" data-i18n="musicSong">王俊凯 (Karry Wang) 🎵</div>
+      <div class="player-artist" data-i18n="musicArtist">依依最爱 • 浪漫循环 💖</div>
+    </div>
+    <button id="player-play-btn" class="player-ctrl-btn" aria-label="Play or Pause Music">▶️</button>
+    <audio id="romantic-audio-element" src="assets/audio/wang_junkai.mp3" loop preload="auto"></audio>
+  </div>
+
+  <!-- MODAL: LETTER PARCHMENT -->
+  <div id="letter-modal" class="letter-modal">
+    <div class="letter-parchment">
+      <button id="letter-close-btn" class="letter-close-btn" aria-label="Close Letter">✕</button>
+      <div class="letter-header">
+        <h3 class="letter-salutation" data-i18n="letterSalutation">最亲爱的 依依 (我的小宝贝)：</h3>
+        <div class="letter-subtitle" data-i18n="letterSubtitle">Happy Birthday to my sweetest girl</div>
+      </div>
+      <div class="letter-body">
+        <p data-i18n="letterP1">今天是8月20日，你的专属大日子，祝我最爱的宝贝生日快乐！🎂🎉</p>
+        <p data-i18n="letterP2">现在的我隔着8000多公里，但我脑海里全是你可爱的模样。真的好想你，想你的声音，想你喊我「baby」的甜美，想紧紧抱着你感受你的温度。</p>
+        <p data-i18n="letterP3">过去的这些时光里，和你在一起的每一刻都刻在我的心底。我们之间有太多太多的欢笑与美好回忆，而我相信，这仅仅是我们漫长幸福未来的第一章，未来我们还会有成千上万个更美好的瞬间！</p>
+        <p data-i18n="letterP4">宝贝，无论遇到什么困难或不顺心，请一定要开心、振作起来（Cheer up! 🌟）。你在我眼里是世界上最善良、最棒、最耀眼的女孩。我会一直站在你身后，支持你、保护你、毫无保留地爱着你。</p>
+        <p data-i18n="letterP5">我已经等不及尽快回到中国见你，并且正如我们约定的那样，<span class="letter-highlight">明年我就搬到中国陪伴在你身边</span>，再也不分开了！</p>
+        <p data-i18n="letterP6">愿你今天所有的愿望都能成真，每天都被快乐和甜蜜包围。祝最美的依依永远无忧无虑，笑口常开！</p>
+      </div>
+      <div class="letter-signature" data-i18n="letterSignature">永远深爱你的 Baby 💕<br>2026.08.20</div>
+    </div>
+  </div>
+
+  <!-- MODAL: LIGHTBOX IMAGE VIEWER -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="letter-close-btn" aria-label="Close Lightbox">✕</button>
+      <button id="lightbox-prev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous Photo">❮</button>
+      <button id="lightbox-next" class="lightbox-nav-btn lightbox-next" aria-label="Next Photo">❯</button>
+      <div class="lightbox-img-box">
+        <img id="lightbox-img" src="" alt="Yi Photo Preview">
+      </div>
+      <div class="lightbox-details">
+        <h4 id="lightbox-caption" class="lightbox-caption"></h4>
+        <p id="lightbox-subcaption" class="lightbox-subcaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SKY LANTERN RELEASE -->
+  <div id="lantern-modal" class="game-modal">
+    <div class="game-modal-card">
+      <button class="letter-close-btn game-modal-close">✕</button>
+      <div style="font-size: 3rem; margin-bottom: 10px;">🏮</div>
+      <h3 class="quest-title" data-i18n="lanternModalTitle">🏮 放飞星空许愿天灯</h3>
+      <p class="quest-desc" data-i18n="lanternPlaceholder">在这里写下你的愿望（或直接放飞默认祝福）...</p>
+      <input type="text" id="lantern-input" style="width: 100%; padding: 12px 18px; border-radius: 12px; border: 1px solid var(--glass-border-highlight); background: rgba(0,0,0,0.3); color: #fff; margin-bottom: 20px; font-size: 1rem;" placeholder="愿依依岁岁平安，幸福无忧，所愿皆成真！💖" />
+      <button id="send-lantern-btn" class="quest-action-btn" data-i18n="lanternSendBtn">放飞天灯 🌟</button>
+    </div>
+  </div>
+
+  <!-- MODAL: LOVE REASONS CAPSULE -->
+  <div id="reason-modal" class="game-modal">
+    <div class="game-modal-card">
+      <button class="letter-close-btn game-modal-close">✕</button>
+      <h3 class="quest-title" data-i18n="reasonModalTitle">💖 爱你的理由</h3>
+      <div id="reason-card-content" style="padding: 20px 0;"></div>
+      <button id="next-reason-btn" class="quest-action-btn" data-i18n="nextReasonBtn">再抽一颗 🎁</button>
+    </div>
+  </div>
+
+  <!-- MODAL: BIRTHDAY CAKE CANDLES -->
+  <div id="cake-modal" class="game-modal">
+    <div class="game-modal-card">
+      <button class="letter-close-btn game-modal-close">✕</button>
+      <h3 class="quest-title" data-i18n="cakeModalTitle">🎂 宝贝 依依，许个愿吧！</h3>
+      <p class="quest-desc" data-i18n="cakeHint">👉 点击跳动的火苗吹灭蜡烛 👈</p>
+      
+      <div class="cake-box">
+        <div id="candle-flame" class="candle-flame" title="点击吹灭蜡烛">🔥</div>
+        <div class="cake-emoji">🎂</div>
+      </div>
+
+      <div id="cake-msg" style="display: none; color: var(--gold-primary); font-size: 1.1rem; font-weight: 700; margin-top: 15px;" data-i18n="cakeBlownMsg">
+        🎉 蜡烛已吹灭！愿望一定会实现！宝贝生日快乐！🎊
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/fireworks.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/envelope.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/lanterns.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

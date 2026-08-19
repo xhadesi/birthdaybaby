@@ -1,0 +1,211 @@
+/* ==========================================================================
+   RESPONSIVE & WECHAT MOBILE OPTIMIZATIONS (LIQUID GLASS MOBILE TUNED)
+   ========================================================================== */
+
+/* Safe area insets for notched iPhones and Android fullscreens */
+:root {
+  --safe-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+@media (max-width: 992px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 55px;
+    padding-right: 15px;
+    text-align: left !important;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 9px;
+    right: auto;
+  }
+
+  .top-nav {
+    padding: 10px 18px;
+  }
+
+  .brand-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px 15px calc(110px + var(--safe-bottom));
+  }
+
+  .top-nav {
+    margin-bottom: 25px;
+  }
+
+  .countdown-section {
+    padding: 30px 10px;
+  }
+
+  .countdown-title {
+    font-size: 2.1rem;
+  }
+
+  .countdown-grid {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .countdown-card {
+    min-width: 72px;
+    padding: 16px 10px;
+    border-radius: 18px;
+  }
+
+  .countdown-val {
+    font-size: 2.3rem;
+  }
+
+  .countdown-lbl {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+  }
+
+  .countdown-unlock-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .hero-avatar-wrap {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  .hero-main-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-submessage {
+    font-size: 1.05rem;
+  }
+
+  .polaroid-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 5px;
+  }
+
+  .polaroid-card {
+    padding: 10px 10px 16px 10px;
+    border-radius: 8px;
+  }
+
+  .polaroid-caption {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+
+  .polaroid-subcaption {
+    font-size: 0.7rem;
+  }
+
+  /* Envelope on Mobile */
+  .envelope-wrapper {
+    max-width: 340px;
+  }
+
+  .envelope-box {
+    height: 250px;
+    border-radius: 16px;
+  }
+
+  .envelope-ribbon-gold {
+    width: 28px;
+  }
+
+  .wax-seal {
+    width: 75px;
+    height: 75px;
+  }
+
+  .wax-seal span {
+    font-size: 1.5rem;
+  }
+
+  .envelope-tip {
+    font-size: 0.9rem;
+    padding: 4px 14px;
+  }
+
+  .letter-parchment {
+    padding: 30px 20px;
+  }
+
+  .letter-salutation {
+    font-size: 1.8rem;
+  }
+
+  .letter-body {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .floating-audio-player {
+    bottom: calc(15px + var(--safe-bottom));
+    right: 15px;
+    padding: 8px 14px 8px 10px;
+  }
+
+  .player-track-title {
+    font-size: 0.8rem;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .player-artist {
+    font-size: 0.68rem;
+  }
+
+  .quests-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-main-title {
+    font-size: 2.1rem;
+  }
+
+  .connection-badge {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+    gap: 10px;
+  }
+
+  .location-tag {
+    font-size: 0.88rem;
+  }
+
+  .flight-line {
+    font-size: 0.78rem;
+  }
+
+  .polaroid-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
